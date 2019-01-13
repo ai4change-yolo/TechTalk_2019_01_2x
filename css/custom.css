@@ -1,0 +1,47 @@
+.leftContent3 {
+    float:left;
+    width: 20%;
+    clear: left;
+}
+
+.centerContent3 {
+    float: left;
+    width: 60%;
+}
+
+
+.rightContent3 {
+    float: right;
+    width: 20%;
+}
+
+
+.leftContent2 {
+    float:left;
+    width: 50%;
+    clear: left;
+}
+
+.rightContent2 {
+    float: right;
+    width: 50%;
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.small p {
+    text-align: left;
+    font-size: 0.8em; }
+
+body:after {
+    content: url(../img/logo.png);
+    position: fixed;
+    bottom: 50px;
+    left: 50px}

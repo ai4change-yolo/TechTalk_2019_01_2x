@@ -1,0 +1,636 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h2>The smart shopping basket</h2>
+            <h4>A Case Study with deep learning,</br>Intel Movidius and AWS</h4>
+        </section>
+        <!-- Introduction - online vs offline retailers-->
+        <section>
+            <h4>Offline relatilers have much more challenges to handle than online shops</h4>
+        </section>
+        <!-- Recommendations-->
+        <section>
+            <h3>Recommendations and cross-selling</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="400" height="220" data-src="img/recommendations.png">
+                </div>
+                <div class="rightContent2">
+                    <ul>
+                        <li>
+                            <div class="small">
+                                <p class="fragment">A common used technique to increase sales
+                                <p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small">
+                                <p class="fragment">Hard to achieve in offline shops due to limited possibilities for
+                                    real-time interaction with customer
+                                <p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Queues to cash desks-->
+        <!-- <section>
+            <h3>Customer satisfaction</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="400" height="220" data-src="img/queue.jpg">
+                </div>
+                <div class="rightContent2">
+                    <ul>
+                        <li>
+                            <div class="small">
+                                <p class="fragment">Noone likes waiting in long queues to cash desk
+                                <p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small">
+                                <p class="fragment">Predicting store traffic might sound like a perfect solution
+                                <p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="small">
+                                <p class="fragment">Maybe there is a better way for that?
+                                <p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+        <!-- Traditional shopping cart-->
+        <section>
+            <h3>A shopping cart - the greatest limitation</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="900" height="490" data-src="img/old_fashioned_shopping_cart.png">
+                </div>
+                <div class="rightContent2">
+                    <br>
+                    <p>If only it could recognize what's inside and display real-time recommendations for customers</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <img width="600" height="310" data-src="img/tweet.png">
+        </section>
+        <section>
+            <h3>Bariers to moving AI to the Edge:</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Model size
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Insufficient computing power
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Large power needs
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Low efficiency of simple models
+                        <p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section data-background="#FFFFFF">
+            <img width="900" height="490" data-src="img/movidius_raspberry.png">
+        </section>
+        <section data-background="#FFFFFF">
+            <h3>Intel® Movidius™ Neural Compute Stick</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="320" data-src="img/movidius.png">
+                </div>
+                <div class="rightContent2">
+                    <p>This tiny, fanless, deep learning device allows you to learn AI programming at the edge.</p>
+                </div>
+            </div>
+            <aside class="notes">
+                Move computting from the cloud to the edge
+            </aside>
+        </section>
+        <section data-background="#053d6f">
+            <h3>Intel® Movidius™ NCS - Key Features</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">An ultra-low power design
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Unique design for vision and AI workloads
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">A small-area footprint
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Supported frameworks: TensorFlow*, Caffe*
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Real-time on device inference – Cloud connectivity not required
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">The ability to run multiple devices on the same platform to scale
+                            performance
+                        <p>
+                    </div>
+                </li>
+            </ul>
+            <aside class="notes">
+                An ultra-low power design - For mobile and connected devices where battery life is critical, Myriad 2
+                provides a way to combine advanced vision applications in a low power profile. Intel's Movidius™ Myriad™
+                2 VPU delivers vision capabilities to
+                classes of devices previously unable to perform such demanding vision tasks.
+                Unique design for vision and AI workloads - Featuring 12 VLIW programmable SHAVE cores, dedicated vision
+                accelerators and 2 CPUS, all connected by an intelligent memory fabric, Intel's Movidius™ Myriad™ 2 VPU
+                is a fully functional vision SoC
+                designed for high performance at ultra-low power. The highly parallel design and optimizations for
+                sparse data structures make Myriad VPUs well suited to deep neural network applications and other modern
+                vision workloads.
+                12 programmable SHAVE cores - The flexibility for developers to implement differentiated and proprietary
+                applications is fundamental to Intel® Movidius™ Myriad™ 2 VPUs. Our optimized software libraries give
+                device manufacturers the ability to
+                run custom and proprietary operations on the 12 high performance SHAVE cores.
+                A small-area footprint - To conserve space inside mobile, wearable, and embedded devices, Intel's
+                Movidius™ Myriad™ 2 was designed with a very small footprint that can easily be integrated into existing
+                products.
+            </aside>
+        </section>
+        <section>
+          <h3>What are the Key Capabilities of Intel Movidius NCS?</h3>
+        </section>
+        <section data-background="#000000" data-background-video="img/guitar.mov" data-background-size="contain">
+        </section>
+        <!--<section data-background="#053d6f">
+            <h3>Intel® Movidius™ NCS - Key Capabilities</h3>
+            <div class="leftContent2">
+                <div class="small">
+                    <p class="fragment">Key Capabiities:
+                    <p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="small">
+                            <p class="fragment">Object detection
+                            <p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="small">
+                            <p class="fragment">Object classification
+                            <p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="small">
+                            <p class="fragment">Facial recognition
+                            <p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="small">
+                            <p class="fragment">Natural Language Processing
+                            <p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="rightContent2">
+                <img width="490" height="330" data-src="img/shark_spotter.jpg">
+            </div>
+        </section>-->
+        <section data-transition="none">
+            <h3>YOLO: Real-Time Object Detection</h3>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>The original image</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_grid.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>The image is splitted into a grid</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_oshee_red.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_oshee_bound.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_empty_red.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_empty_bound.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_empty_bound_grid.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_boundes.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_grid.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Each cell also predicts a probability of belonging to a given class</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_boundes.jpg">
+                </div>
+                <div class="rightContent2">
+                    <img width="420" height="420" data-src="img/products_grid_color.jpg">
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_boundes_color.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>Then we multiply anchor boxes times class predictions</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How does the YOLO work?</h3>
+            <div>
+                <div class="leftContent2">
+                    <img width="420" height="420" data-src="img/products_result_color.jpg">
+                </div>
+                <div class="rightContent2">
+                    <p>In the last step, the threshold is applied</p>
+                </div>
+            </div>
+        </section>
+        <section data-transition="none">
+            <h3>How we can train the YOLO algorithm?</h3>
+        </section>
+        <section data-background="#000000" data-background-video="img/darknet.mov" data-background-size="contain">
+        </section>
+        <section data-transition="none">
+            <h3>How to deploy a trained model</br>on Intel Movidius NCS?</h3>
+        </section>
+        <section data-background="#000000" data-background-video="img/movidius.mov" data-background-size="contain">
+        </section>
+        <section data-transition="none">
+            <h3>How to evaluate the model</br>on Raspberry Pi?</h3>
+        </section>
+        <section data-background="#000000" data-background-video="img/raspberry.mov" data-background-size="contain">
+        </section>
+
+        <!-- Architecture overview - high-level -->
+        <section data-background="#FFFFFF">
+            <h3>High-level architecture overview</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_1.png">
+        </section>
+
+        <section>
+            <h3>AWS IoT Core</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Allows devices interact with cloud environment
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Supports bi-directional communication
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Support protocols: MQTT, HTTP, MQTT + WebSocket
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Serverless
+                        <p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Communication with AWS - used library</h3>
+                <div class="small">
+                    <p class="fragment"><b>AWS IoT Device SDK for Python</b>
+                    <p>
+                </div>
+                <div class="small">
+                         <pre><code>
+class Communication:
+    def connect(self):
+        self.myAWSIoTMQTTClient.connect()
+
+    def subscribe(self, topic, callback):
+        self.myAWSIoTMQTTClient.subscribe(topic, 1, callback)
+
+    def publish(self, topic, message):
+        self.myAWSIoTMQTTClient.publish(topic, message, 1)
+  </code></pre>
+</div>
+        </section>
+
+
+        <section data-background="#FFFFFF">
+            <h3>High-level architecture overview</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_2.png">
+        </section>
+        <section>
+            <h3>Communication with AWS - Publish</h3>
+                <div class="small">
+                         <pre><code>
+{
+   "RaspberryPI":{
+      "product_type":"productA"
+   }
+}
+  </code></pre>
+                </div>
+        </section>
+
+        <section data-background="#FFFFFF">
+            <h3>High-level architecture overview</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_3.png">
+        </section>
+        <section>
+            <h3>AWS Lambda</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Run code without servers
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Triggers computation immediately
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Executes code only when needed
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Integration with Tensorflow
+                        <p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section data-background="#FFFFFF">
+            <h3>High-level architecture overview</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_4.png">
+        </section>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>High-level architecture overview</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_5.png">
+        </section>
+
+        <section>
+            <h3>Communication with AWS - Subscribe</h3>
+
+                <div class="small">
+                         <pre><code>
+{
+   "AWS":{
+      "recommendation":"productB"
+   }
+}
+  </code></pre>
+                </div>
+        </section>
+        <section>
+            <h3>Demo</h3>
+        </section>
+        <section data-background="#000000" data-background-video="img/demo.mov" data-background-video-muted="" data-background-size="contain">
+        </section>
+        <section data-background="#000000" data-background-video="img/demo2.mov" data-background-size="contain">
+        </section>
+        <section>
+            <h3>Future Work</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Train YOLO with more different products
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Rebuild and improve the recommendation algorithm
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">Add payment terminal to the cart
+                        <p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Thank You</h3>
+            <div class="leftContent2">
+              <p class="small">Marcin Stachowiak</p>
+            </div>
+            <div class="rightContent2">
+              <p class="small">Michał Dura</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [{
+						src: 'plugin/markdown/marked.js'
+					},
+					{
+						src: 'plugin/markdown/markdown.js'
+					},
+					{
+						src: 'plugin/notes/notes.js',
+						async: true
+					},
+					{
+						src: 'plugin/highlight/highlight.js',
+						async: true,
+						callback: function() {
+							hljs.initHighlightingOnLoad();
+						}
+					}
+				]
+			});
+
+
+
+
+
+
+
+
+
+
+    </script>
+</div>
+</body>
+
+</html>
