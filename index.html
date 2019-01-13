@@ -38,170 +38,238 @@
 <div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-        <section>
-            <h2>The smart shopping basket</h2>
-            <h4>A Case Study with deep learning,</br>Intel Movidius and AWS</h4>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h2>INTELIGENTNY KOSZYK <br>NA ZAKUPY</h2>
+            <h4>STUDIUM PRZYPADKU<br>DEEP LEARNING - INTEL MOVIDIUS - AWS</h4>
+			<img data-src="img/Capgemini.jpg">
+        </section>
+		
+		<!-- Motivation. -->
+		<section data-background="#FFFFFF" data-transition="none">
+            <h3>Hackathon Capgemini - AI4CHANGE</h3>
+			<img width="800" data-src="img/AI4CHANGE.png">
+        </section>
+
+		<section data-background="#FFFFFF" data-transition="none">
+			<img width="800" data-src="img/logo-data-science-community-01.png">
+        </section>
+
+		
+		<!-- Who we are? -->
+		<section data-background="#FFFFFF" data-transition="none">
+            <h3>Team</h3>
+			<img width="800" data-src="img/team.png">
+        </section>
+		
+		
+		<!-- Motivation. -->
+		<section data-background="#FFFFFF" data-transition="none">
+            <h3>Nasza motywacja</h3>
+			<div class="leftContent2">
+				<!-- Image source: https://pixabay.com/de/gehirn-geist-psychologie-idee-2062057/ -->
+				<img width="900" data-src="img/brain-2062057_640.jpg">
+			</div>
+			<div class="rightContent2">
+				<ul>
+					<li>
+						<div class="small">
+							<p class="fragment">temat miał być związany z AI
+							<p>
+						</div>
+					</li>
+					<li>
+						<div class="small">
+							<p class="fragment">nasz pierwszy wybór: obszar biznesowy dot. koszyków zakupowych
+							<p>
+						</div>
+					</li>
+					<li>
+						<div class="small">
+							<p class="fragment">nasz drugi wybór: IoT i Edge Computing 
+							<p>
+						</div>
+					</li>
+					<li>
+						<div class="small">
+							<p class="fragment">nasz trzeci wybór: AWS
+							<p>
+						</div>
+					</li>
+				</ul>
+			</div>
         </section>
         <!-- Introduction - online vs offline retailers-->
-        <section>
-            <h4>Offline relatilers have much more challenges to handle than online shops</h4>
-        </section>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h4>Dlaczego zakupy detaliczne?</h4>
+			<div class="leftContent2">
+				<!-- Image source: https://pixabay.com/de/einkaufen-geschäft-einzelhandel-1165437/ -->
+				<img width="900" data-src="img/shopping-1165437_640.jpg">
+			</div>
+			<div class="rightContent2">
+				<ul>
+					<li>
+						<div class="small">
+							<p class="fragment">...bo widzieliśmy problem: jak zrealizować rekomendowanie produktów?  
+							<p>
+						</div>
+					</li>
+					<li>
+						<div class="small">
+							<p class="fragment">...bo widzieliśmy szansę: dobry obszar do stosowania IoT
+							<p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
         <!-- Recommendations-->
-        <section>
-            <h3>Recommendations and cross-selling</h3>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>Coś co jest oczywiste w sklepie on-line...</h3>
             <div>
-                <div class="leftContent2">
-                    <img width="400" height="220" data-src="img/recommendations.png">
-                </div>
-                <div class="rightContent2">
-                    <ul>
-                        <li>
-                            <div class="small">
-                                <p class="fragment">A common used technique to increase sales
-                                <p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="small">
-                                <p class="fragment">Hard to achieve in offline shops due to limited possibilities for
-                                    real-time interaction with customer
-                                <p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <img width="800" data-src="img/recommendations.png">
+				<p>...jest sporym wyzwaniem w sklepie off-line. 
             </div>
         </section>
-        <!-- Queues to cash desks-->
-        <!-- <section>
-            <h3>Customer satisfaction</h3>
-            <div>
-                <div class="leftContent2">
-                    <img width="400" height="220" data-src="img/queue.jpg">
-                </div>
-                <div class="rightContent2">
-                    <ul>
-                        <li>
-                            <div class="small">
-                                <p class="fragment">Noone likes waiting in long queues to cash desk
-                                <p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="small">
-                                <p class="fragment">Predicting store traffic might sound like a perfect solution
-                                <p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="small">
-                                <p class="fragment">Maybe there is a better way for that?
-                                <p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
-        <!-- Traditional shopping cart-->
-        <section>
-            <h3>A shopping cart - the greatest limitation</h3>
+        <!-- Introduction - online vs offline retailers-->
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>Jak to robią inni?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="900" height="490" data-src="img/old_fashioned_shopping_cart.png">
                 </div>
                 <div class="rightContent2">
-                    <br>
-                    <p>If only it could recognize what's inside and display real-time recommendations for customers</p>
+                    <ul>
+						<li>grudzień 2016 - Amazon otwiera pierwszy sklep detaliczny pod marką Amazon Go (w wersji beta)</li>
+						<li>wrzesień 2018 - Microsoft i Żabka prezentują koncept "sklepu jutra"</li>
+					</ul>
                 </div>
             </div>
+			<p style="font-size:11pt"> 
+				<ul>
+					<li style="font-size:11pt">
+					https://www.amazon.com/b?node=16008589011</li>
+					<li style="font-size:11pt"> https://news.microsoft.com/pl-pl/2018/09/14/zabka-wskazuje-przyszlosc-handlu-wspolnie-z-microsoft-prezentuje-innowacyjny-koncept-sklepu/</li>
+					<li style="font-size:11pt">https://www.zabka.pl/biuro-prasowe/zabka-wskazuje-przyszlosc-handlu-wspolnie-z-microsoft-prezentuje-innowacyjny-koncept-sklepu</li>
+				</ul>
+			</p>
         </section>
-        <section>
-            <img width="600" height="310" data-src="img/tweet.png">
+        <section data-background="#FFFFFF" data-transition="none">
+			<h3>A dlaczego Edge Computing?</h3>
+            <img width="800" data-src="img/tweet.png">
         </section>
-        <section>
-            <h3>Bariers to moving AI to the Edge:</h3>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>Wyzwania implementacyjne w przenoszeniu AI/ML do Edge:</h3>
             <ul>
                 <li>
                     <div class="small">
-                        <p class="fragment">Model size
+                        <p class="fragment">rozmiary modeli
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Insufficient computing power
+                        <p class="fragment">dostępna moc obliczeniowa
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Large power needs
+                        <p class="fragment">konsumpcja energii
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Low efficiency of simple models
+                        <p class="fragment">niska dokładność prostych modeli 
                         <p>
                     </div>
                 </li>
             </ul>
         </section>
-        <section data-background="#FFFFFF">
+        <section data-transition="none" data-background="#FFFFFF">
+            <h3>Po co jeszcze do tego używać AWS?</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">centralna baza danych (produkty i koszyki)
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">centralna definicja logiki biznesowej
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">monitoring działania systemu
+                        <p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>Architektura - wersja docelowa</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_6.png">
+        </section>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>Architektura - PoC</h3>
+            <img width="900" height="230" data-src="img/architecture_high_level_5.png">
+        </section>
+        <section data-background="#FFFFFF" data-transition="none">
             <img width="900" height="490" data-src="img/movidius_raspberry.png">
         </section>
-        <section data-background="#FFFFFF">
+        <section data-background="#FFFFFF" data-transition="none">
             <h3>Intel® Movidius™ Neural Compute Stick</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="320" data-src="img/movidius.png">
                 </div>
                 <div class="rightContent2">
-                    <p>This tiny, fanless, deep learning device allows you to learn AI programming at the edge.</p>
+                    <p>Mały, energooszczędny, <br>w formie pendrive'a, <br>służy do&nbsp;eksperymentowania i&nbsp;nauki w obszarze stosowania AI w&nbsp;modelu Edge Computing.</p>
                 </div>
             </div>
             <aside class="notes">
-                Move computting from the cloud to the edge
+                Przeniesienie obliczeń z chmury na "edge"
             </aside>
         </section>
-        <section data-background="#053d6f">
-            <h3>Intel® Movidius™ NCS - Key Features</h3>
+        <section data-background="#053d6f" data-transition="none">
+            <h3>Intel® Movidius™ NCS - kluczowe cechy</h3>
             <ul>
                 <li>
                     <div class="small">
-                        <p class="fragment">An ultra-low power design
+                        <p class="fragment">ultra-niski pobór mocy
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Unique design for vision and AI workloads
+                        <p class="fragment">konstrukcja ukierunkowana na przetwarzanie obrazów oraz AI
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">A small-area footprint
+                        <p class="fragment">małe rozmiary
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Supported frameworks: TensorFlow*, Caffe*
+                        <p class="fragment">dostępne frameworki: TensorFlow, Caffe
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Real-time on device inference – Cloud connectivity not required
+                        <p class="fragment">wyniki obliczeń dostępne w czasie rzeczywistym (brak wymogu łączności z chmurą) 
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">The ability to run multiple devices on the same platform to scale
-                            performance
+                        <p class="fragment">skalowalność - możliwość użycia wielu urządzeń równolegle na tej samej platformie
                         <p>
                     </div>
                 </li>
@@ -226,153 +294,157 @@
                 products.
             </aside>
         </section>
-        <section>
-          <h3>What are the Key Capabilities of Intel Movidius NCS?</h3>
+        
+		<section data-background="#053d6f" data-transition="none">
+          <h3>Jakie są możliwości Intel Movidius NCS?</h3>
         </section>
-        <section data-background="#000000" data-background-video="img/guitar.mov" data-background-size="contain">
-        </section>
-        <!--<section data-background="#053d6f">
-            <h3>Intel® Movidius™ NCS - Key Capabilities</h3>
+        <!-- brak pliku guitar.mov -->
+		<!--
+		<section data-background="#000000" data-background-video="img/guitar.mov" data-background-size="contain" data-transition="none">
+        </section> 
+		-->
+        <section data-background="#053d6f" data-transition="none">
+            <h3>Intel® Movidius™ NCS</h3>
             <div class="leftContent2">
+                <img width="490" height="330" data-src="img/shark_spotter.jpg">
+            </div>
+            <div class="rightContent2">
                 <div class="small">
-                    <p class="fragment">Key Capabiities:
+                    <p class="fragment">Możliwe zastosowania:
                     <p>
                 </div>
                 <ul>
                     <li>
                         <div class="small">
-                            <p class="fragment">Object detection
+                            <p class="fragment">detekcja obiektów
                             <p>
                         </div>
                     </li>
                     <li>
                         <div class="small">
-                            <p class="fragment">Object classification
+                            <p class="fragment">klasyfikacja obiektów
                             <p>
                         </div>
                     </li>
                     <li>
                         <div class="small">
-                            <p class="fragment">Facial recognition
+                            <p class="fragment">rozpoznawanie twarzy
                             <p>
                         </div>
                     </li>
                     <li>
                         <div class="small">
-                            <p class="fragment">Natural Language Processing
+                            <p class="fragment">przetwarzanie języka naturalnego
                             <p>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="rightContent2">
-                <img width="490" height="330" data-src="img/shark_spotter.jpg">
-            </div>
-        </section>-->
-        <section data-transition="none">
-            <h3>YOLO: Real-Time Object Detection</h3>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>YOLO: wykrywanie obiektów w czasie rzeczywistym</h3>
+        </section>
+        <section data-transition="none">
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>The original image</p>
+                    <p>obraz wyjściowy</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_grid.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>The image is splitted into a grid</p>
+                    <p>obraz podzielony na mniejsze elementy (siatkę)</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_oshee_red.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                    <p>każdy z elementów służy do estymacji położenia i rozmiarów prostokąta ograniczającego obiekt oraz miary ufności obliczanej na podstawie p-stwa wystąpienia obiektu</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_oshee_bound.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                    <p>każdy z elementów służy do estymacji położenia i rozmiarów prostokąta ograniczającego obiekt oraz miary ufności obliczanej na podstawie p-stwa wystąpienia obiektu</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_empty_red.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                    <p>każdy z elementów służy do estymacji położenia i rozmiarów prostokąta ograniczającego obiekt oraz miary ufności obliczanej na podstawie p-stwa wystąpienia obiektu</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_empty_bound.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                    <p>każdy z elementów służy do estymacji położenia i rozmiarów prostokąta ograniczającego obiekt oraz miary ufności obliczanej na podstawie p-stwa wystąpienia obiektu</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_empty_bound_grid.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                    <p>każdy z elementów służy do estymacji położenia i rozmiarów prostokąta ograniczającego obiekt oraz miary ufności obliczanej na podstawie p-stwa wystąpienia obiektu</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_boundes.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell products anchor boxes and the likelihood P(Object)</p>
+                    <p>każdy z elementów służy do estymacji położenia i rozmiarów prostokąta ograniczającego obiekt oraz miary ufności obliczanej na podstawie p-stwa wystąpienia obiektu</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_grid.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Each cell also predicts a probability of belonging to a given class</p>
+                    <p>każdy z elementów służy także do estymacji prawdopodobieństwa przynależności obiektu do danej klasy</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_boundes.jpg">
@@ -383,88 +455,231 @@
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_boundes_color.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>Then we multiply anchor boxes times class predictions</p>
+                    <p>w kolejnym kroku miary ufności dla prostokątów ograniczających obiekt są mnożone przez prawdopodobieństwa przynależności obiektu do klasy</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How does the YOLO work?</h3>
+            <h3>Jak działa YOLO?</h3>
             <div>
                 <div class="leftContent2">
                     <img width="420" height="420" data-src="img/products_result_color.jpg">
                 </div>
                 <div class="rightContent2">
-                    <p>In the last step, the threshold is applied</p>
+                    <p>w ostatnim kroku odrzuca się detekcje, dla których wcześniej wyliczona wartość jest niższa niż zadany próg</p>
                 </div>
             </div>
         </section>
         <section data-transition="none">
-            <h3>How we can train the YOLO algorithm?</h3>
+            <h3>Jak wyszkolić algorytm YOLO?</h3>
         </section>
-        <section data-background="#000000" data-background-video="img/darknet.mov" data-background-size="contain">
+		<!-- brak pliku darknet.mov -->
+		<!--
+        <section data-background="#000000" data-background-video="img/darknet.mov" data-background-size="contain" data-transition="none">
         </section>
+		-->
+        <section data-background="#053d6f" data-transition="none">
+            <h3>Jak przenieść wyszkolony algorytm</br>na Intel Movidius NCS?</h3>
+        </section>
+		<!-- brak pliku movidius.mov -->
+		<!--
+        <section data-background="#000000" data-background-video="img/movidius.mov" data-background-size="contain" data-transition="none">
+        </section>
+		-->
         <section data-transition="none">
-            <h3>How to deploy a trained model</br>on Intel Movidius NCS?</h3>
+            <h3>Jak ocenić działający algorytm</br>na Raspberry Pi?</h3>
         </section>
-        <section data-background="#000000" data-background-video="img/movidius.mov" data-background-size="contain">
+		<!-- brak pliku raspberry.mov -->
+		<!--
+        <section data-background="#000000" data-background-video="img/raspberry.mov" data-background-size="contain" data-transition="none">
         </section>
-        <section data-transition="none">
-            <h3>How to evaluate the model</br>on Raspberry Pi?</h3>
-        </section>
-        <section data-background="#000000" data-background-video="img/raspberry.mov" data-background-size="contain">
-        </section>
+		-->
 
         <!-- Architecture overview - high-level -->
-        <section data-background="#FFFFFF">
-            <h3>High-level architecture overview</h3>
+        <section data-background="#FFFFFF" data-transition="none">
             <img width="900" height="230" data-src="img/architecture_high_level_1.png">
         </section>
 
-        <section>
+        <section data-background="#FFFFFF" data-transition="none">
             <h3>AWS IoT Core</h3>
             <ul>
                 <li>
                     <div class="small">
-                        <p class="fragment">Allows devices interact with cloud environment
+                        <p class="fragment">pozwala na interakcję urządzeń IoT z chmurą 
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Supports bi-directional communication
+                        <p class="fragment">pozwala na dwukierunkową komunikację 
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Support protocols: MQTT, HTTP, MQTT + WebSocket
+                        <p class="fragment">implementuje protokoły: MQTT, HTTP, MQTT + WebSocket
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Serverless
+                        <p class="fragment">umożliwia stosowanie paradygmatu serverless
                         <p>
                     </div>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h3>Communication with AWS - used library</h3>
-                <div class="small">
-                    <p class="fragment"><b>AWS IoT Device SDK for Python</b>
-                    <p>
-                </div>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>MQTT</h3>
+			<img data-src="img/MQTTCapture.PNG">
+		</section>
+
+        <section data-background="#FFFFFF" data-transition="none">
+            <img width="900" height="230" data-src="img/architecture_high_level_2.png">
+        </section>
+        <section data-transition="none">
+            <h3>Komunikacja z AWS - publish</h3>
                 <div class="small">
                          <pre><code>
+{
+  "product": "tomato"
+}
+						</code></pre>
+                </div>
+        </section>
+
+        <section data-background="#FFFFFF" data-transition="none">
+            <img width="900" height="230" data-src="img/architecture_high_level_3.png">
+        </section>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>AWS Lambda</h3>
+            <ul>
+                <li>
+                    <div class="small">
+                        <p class="fragment">pozwala uruchamiać niewielkie fragmenty kodu w chmurze, bez konieczności utrzymywania własnego serwera
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">obliczenia wykonywane są natychmiast 
+                        <p>
+                    </div>
+                </li>
+                <li>
+                    <div class="small">
+                        <p class="fragment">kod jest uruchamiany tylko w razie potrzeby 
+                        <p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section data-background="#FFFFFF" data-transition="none"> 
+            
+            <img width="900" height="230" data-src="img/architecture_high_level_4.png">
+        </section>
+        <section data-background="#FFFFFF" data-transition="none">
+            
+            <img width="900" height="230" data-src="img/architecture_high_level_5.png">
+        </section>
+
+        <section data-transition="none">
+            <h3>Komunikacja z AWS IoT - subscribe</h3>
+
+                <div class="small">
+                         <pre><code>
+{
+  "output": {
+    "recommendation": "cucumber"
+  }
+}
+  </code></pre>
+                </div>
+        </section>
+
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS1Capture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS2Capture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS3Capture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS4Capture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS5Capture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS6Capture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Jak to "wyklikać" w AWS?</h3>
+			<img data-src="img/AWS7Capture.PNG">
+		</section>
+
+		
+        <section data-transition="none">
+            <h3>Komunikacja z AWS IoT - biblioteka</h3>
+
+			<div class="small">
+					<pre><code>
+from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
+						 
 class Communication:
+	def __init__(self, host, port, rootCAPath, \
+	  privateKeyPath, certificatePath):
+	    # Init AWSIoTMQTTClient
+		self.myAWSIoTMQTTClient = AWSIoTMQTTClient()
+		self.myAWSIoTMQTTClient.configureEndpoint(host,\
+			port)
+		self.myAWSIoTMQTTClient.configureCredentials(\
+			rootCAPath, privateKeyPath, \
+			certificatePath)
+					</code></pre>
+			</div>
+        </section>
+        <section data-transition="none">
+            <h3>Komunikacja z AWS IoT - biblioteka</h3>
+
+			<div class="small">
+					 <pre><code>
+# AWSIoTMQTTClient connection configuration
+self.myAWSIoTMQTTClient.configureAutoReconnectBackoffTime(1,\
+	32, 20)
+# Infinite offline Publish queueing
+self.myAWSIoTMQTTClient.configureOfflinePublishQueueing(-1)  
+# Draining: 2 Hz
+self.myAWSIoTMQTTClient.configureDrainingFrequency(2)  
+# 10 sec
+self.myAWSIoTMQTTClient.configureConnectDisconnectTimeout(10)  
+# 5 sec
+self.myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)  
+					</code></pre>
+			</div>
+        </section>
+
+        <section data-transition="none">
+            <h3>Komunikacja z AWS IoT - biblioteka</h3>
+			<div class="small">
+					 <pre><code>
+
     def connect(self):
         self.myAWSIoTMQTTClient.connect()
 
@@ -473,123 +688,91 @@ class Communication:
 
     def publish(self, topic, message):
         self.myAWSIoTMQTTClient.publish(topic, message, 1)
-  </code></pre>
-</div>
-        </section>
-
-
-        <section data-background="#FFFFFF">
-            <h3>High-level architecture overview</h3>
-            <img width="900" height="230" data-src="img/architecture_high_level_2.png">
-        </section>
-        <section>
-            <h3>Communication with AWS - Publish</h3>
-                <div class="small">
-                         <pre><code>
-{
-   "RaspberryPI":{
-      "product_type":"productA"
-   }
-}
-  </code></pre>
-                </div>
-        </section>
-
-        <section data-background="#FFFFFF">
-            <h3>High-level architecture overview</h3>
-            <img width="900" height="230" data-src="img/architecture_high_level_3.png">
-        </section>
-        <section>
-            <h3>AWS Lambda</h3>
-            <ul>
-                <li>
-                    <div class="small">
-                        <p class="fragment">Run code without servers
-                        <p>
-                    </div>
-                </li>
-                <li>
-                    <div class="small">
-                        <p class="fragment">Triggers computation immediately
-                        <p>
-                    </div>
-                </li>
-                <li>
-                    <div class="small">
-                        <p class="fragment">Executes code only when needed
-                        <p>
-                    </div>
-                </li>
-                <li>
-                    <div class="small">
-                        <p class="fragment">Integration with Tensorflow
-                        <p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section data-background="#FFFFFF">
-            <h3>High-level architecture overview</h3>
-            <img width="900" height="230" data-src="img/architecture_high_level_4.png">
-        </section>
-        <section data-background="#FFFFFF" data-transition="none">
-            <h3>High-level architecture overview</h3>
-            <img width="900" height="230" data-src="img/architecture_high_level_5.png">
-        </section>
-
-        <section>
-            <h3>Communication with AWS - Subscribe</h3>
-
-                <div class="small">
-                         <pre><code>
-{
-   "AWS":{
-      "recommendation":"productB"
-   }
-}
-  </code></pre>
-                </div>
-        </section>
-        <section>
+					</code></pre>
+			</div>
+        </section data-transition="none">		
+		
+        <section data-transition="none">
             <h3>Demo</h3>
         </section>
-        <section data-background="#000000" data-background-video="img/demo.mov" data-background-video-muted="" data-background-size="contain">
+		<!-- brak pliku demo.mov i demo2.mov -->
+		<!--
+        <section data-background="#000000" data-background-video="img/demo.mov" data-background-video-muted="" data-background-size="contain" data-transition="none">
         </section>
-        <section data-background="#000000" data-background-video="img/demo2.mov" data-background-size="contain">
+        <section data-background="#000000" data-background-video="img/demo2.mov" data-background-size="contain" data-transition="none">
         </section>
-        <section>
-            <h3>Future Work</h3>
+		-->
+        <section data-transition="none" data-background="#FFFFFF">
+            <h3>Lista rzeczy do zrobienia</h3>
             <ul>
                 <li>
                     <div class="small">
-                        <p class="fragment">Train YOLO with more different products
+                        <p class="fragment">uczenie YOLO z większą liczbą różnych produktów 
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Rebuild and improve the recommendation algorithm
+                        <p class="fragment">rozszerzenie funkcjonalności generowania rekomentacji 
                         <p>
                     </div>
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">Add payment terminal to the cart
+                        <p class="fragment">rozszerzenie sprzętu o baterię i obwód do jej ładowania 
                         <p>
                     </div>
                 </li>
             </ul>
         </section>
-        <section>
-            <h3>Thank You</h3>
+        <section data-background="#FFFFFF" data-transition="none">
+            <img width="900" height="230" data-src="img/architecture_high_level_6.png">
+        </section>
+
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>AWS SageMaker</h3>
+			<img data-src="img/SMschematCapture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Model do zastosowania - sieć Kohonena</h3>
+			<img data-src="img/KohonenCapture.PNG">
+		</section>
+		<section data-transition="none" data-background="#FFFFFF">
+			<h3>Zbuduj własny koszyk!</h3>
+                <div class="leftContent2">
+                    <img width="420" data-src="img/kosz.png">
+                </div>
+                <div class="rightContent2">
+					<p>
+                    <ul>
+						<li style="font-size:16pt">Intel Movidius Neural Compute Stick</li>
+						<li style="font-size:16pt">Raspberry Pi 3 model B+ </li>
+						<li style="font-size:16pt">UCTRONICS 3.5" 480 x 320 TFT LCD </li>
+						<li style="font-size:16pt">karta micro-SD (16 GB+)</li>
+						<li style="font-size:16pt">zasilacz USB 2A </li>
+						<li style="font-size:16pt">obudowa do Raspberry Pi i ekranu 3.5” </li>
+						<li style="font-size:16pt">plastikowy koszyk na zakupy</li>
+						<li style="font-size:16pt">elementy montażowe (śruby, tuleje dystansowe, opaski zaciskowe)</li>
+					</ul>
+					</p>
+					<p style="font-size:16pt">
+						Kod do pobrania oraz niniejsza prezentacja: https://github.com/ai4change-yolo/
+					</p>
+                </div>
+		</section>
+        <section data-background="#FFFFFF" data-transition="none">
+            <h3>Dziękujemy!</h3>
             <div class="leftContent2">
               <p class="small">Marcin Stachowiak</p>
             </div>
             <div class="rightContent2">
-              <p class="small">Michał Dura</p>
+              <p class="small">Piotr Szajowski</p>
             </div>
+			<img data-src="img/Capgemini.jpg">
         </section>
+        <section data-background="#FFFFFF" data-transition="none">
+		<h5>https://github.com/ai4change-yolo/</h5>
+		</section>
     </div>
 
     <script src="lib/js/head.min.js"></script>
