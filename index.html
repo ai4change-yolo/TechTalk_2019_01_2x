@@ -750,7 +750,7 @@ self.myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)
 			</div>
 			<aside class="notes">
 				configureAutoReconnectBackoffTime - pozwala skonfigurować zachowanie urządzenia przy ponownym łączeniu z brokerem MQTT; 1 = "base quiet time", 32 = "max quiet time"; kolejne próby połączenia po rozłączeniu są podejmowane kolejno w czasie min(2^n*base quiet time, max quiet time), gdzie n jest numerem próby; 20 = długość stabilnego połączenia - jeśli połączenie będzie stabilne przez taki czas, to resetuje się n<br><br>
-				configureOfflinePublishQueueing - -1 oznacza, że nie kolejkujemy wiadomości w przypadku braku połączenia<br><br>
+				configureOfflinePublishQueueing - -1 oznacza, że kolejkujemy wiadomości bez ograniczeń<br><br>
 				configureDrainingFrequency - częstotliwość wysyłania wiadomości z kolejki po połączeniu w Hz. Tutaj nie ma znaczenia, bo nie kolejkujemy wiadomości, ale należy ten parametr ustawić przez nawiązaniem pierwszego połączenia.<br><br>
 				configureConnectDisconnectTimeout - czas oczekiwania na rozłączenie. Należy ustawić przed pierwszym połączeniem.<br><br>
 				configureMQTTOperationTimeout - czas oczekiwania na wykonanie operacji MQTT, czyli publish, subscribe, unsubscribe.
