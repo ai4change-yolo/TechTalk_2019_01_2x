@@ -52,8 +52,10 @@
 			</aside>
         </section>
 
-        <section data-background="#000000" data-background-video="img/UseCases.mp4" data-background-size="contain" data-transition="none">
-        </section>		
+        <!--
+		<section data-background="#000000" data-background-video="img/UseCases.mp4" data-background-size="contain" data-transition="none">
+        </section>
+		-->
 		
 		<section data-background="#FFFFFF" data-transition="none">
 			<img width="800" data-src="img/logo-data-science-community-01.png">
@@ -118,7 +120,15 @@
         </section>
 		
         <section data-background="#FFFFFF" data-transition="none">
-            <h4>Dlaczego zakupy detaliczne?</h4>
+            <h3>Coś co jest oczywiste w sklepie on-line...</h3>
+            <div>
+                <img width="800" data-src="img/recommendations.png">
+				<p>...jest sporym wyzwaniem w sklepie off-line. 
+            </div>
+        </section>
+		
+        <section data-background="#FFFFFF" data-transition="none">
+            <h4>Temat: zakupy detaliczne w sklepie tradycyjnym</h4>
 			<div class="leftContent2">
 				<!-- Image source: https://pixabay.com/de/einkaufen-geschäft-einzelhandel-1165437/ -->
 				<img width="900" data-src="img/shopping-1165437_640.jpg">
@@ -127,27 +137,19 @@
 				<ul>
 					<li>
 						<div class="small">
-							<p class="fragment">...bo widzieliśmy problem: jak zrealizować rekomendowanie produktów?  
+							<p class="fragment">Problem: jak zrealizować rekomendowanie produktów?  
 							<p>
 						</div>
 					</li>
 					<li>
 						<div class="small">
-							<p class="fragment">...bo widzieliśmy szansę: dobry obszar do stosowania IoT
+							<p class="fragment">Dobry obszar do stosowania IoT!
 							<p>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</section>
-		
-        <section data-background="#FFFFFF" data-transition="none">
-            <h3>Coś co jest oczywiste w sklepie on-line...</h3>
-            <div>
-                <img width="800" data-src="img/recommendations.png">
-				<p>...jest sporym wyzwaniem w sklepie off-line. 
-            </div>
-        </section>
 		
         <section data-background="#FFFFFF" data-transition="none">
             <h3>Jak to robią inni?</h3>
@@ -157,8 +159,8 @@
                 </div>
                 <div class="rightContent2">
                     <ul>
-						<li>grudzień 2016 - Amazon otwiera pierwszy sklep detaliczny pod marką Amazon Go (w wersji beta)</li>
-						<li>wrzesień 2018 - Microsoft i Żabka prezentują koncept "sklepu jutra"</li>
+						<li><p class="fragment">grudzień 2016 - Amazon otwiera pierwszy sklep detaliczny pod marką Amazon Go (w wersji beta)<p></li>
+						<li><p class="fragment">wrzesień 2018 - Microsoft i Żabka prezentują koncept "sklepu jutra"<p></li>
 					</ul>
                 </div>
             </div>
@@ -750,7 +752,7 @@ self.myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)
 			</div>
 			<aside class="notes">
 				configureAutoReconnectBackoffTime - pozwala skonfigurować zachowanie urządzenia przy ponownym łączeniu z brokerem MQTT; 1 = "base quiet time", 32 = "max quiet time"; kolejne próby połączenia po rozłączeniu są podejmowane kolejno w czasie min(2^n*base quiet time, max quiet time), gdzie n jest numerem próby; 20 = długość stabilnego połączenia - jeśli połączenie będzie stabilne przez taki czas, to resetuje się n<br><br>
-				configureOfflinePublishQueueing - -1 oznacza, że kolejkujemy wiadomości bez ograniczeń<br><br>
+				configureOfflinePublishQueueing - -1 oznacza, że nie kolejkujemy wiadomości w przypadku braku połączenia<br><br>
 				configureDrainingFrequency - częstotliwość wysyłania wiadomości z kolejki po połączeniu w Hz. Tutaj nie ma znaczenia, bo nie kolejkujemy wiadomości, ale należy ten parametr ustawić przez nawiązaniem pierwszego połączenia.<br><br>
 				configureConnectDisconnectTimeout - czas oczekiwania na rozłączenie. Należy ustawić przed pierwszym połączeniem.<br><br>
 				configureMQTTOperationTimeout - czas oczekiwania na wykonanie operacji MQTT, czyli publish, subscribe, unsubscribe.
@@ -805,7 +807,7 @@ self.myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)
                 </li>
                 <li>
                     <div class="small">
-                        <p class="fragment">rozszerzenie sprzętu o baterię i obwód do jej ładowania 
+                        <p class="fragment">rozszerzenie sprzętu o kolejne kamery, baterię i obwód do jej ładowania 
                         <p>
                     </div>
                 </li>
